@@ -7,9 +7,9 @@ package gogtypes
 type Media int
 
 const (
-	Game Media = iota
+	Unknown Media = iota
+	Game
 	Movie
-	Unknown
 )
 
 func (mt Media) String() string {
