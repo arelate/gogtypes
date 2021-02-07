@@ -9,6 +9,7 @@ type Media int
 const (
 	Game Media = iota
 	Movie
+	Unknown
 )
 
 func (mt Media) String() string {
@@ -19,5 +20,16 @@ func (mt Media) String() string {
 		return "movie"
 	default:
 		return ""
+	}
+}
+
+func Parse(mt string) Media {
+	switch mt {
+	case "game":
+		return Game
+	case "movie":
+		return Movie
+	default:
+		return Unknown
 	}
 }
