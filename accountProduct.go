@@ -6,7 +6,7 @@ package gogtypes
 
 type AccountProduct struct {
 	IsGalaxyCompatible   bool         `json:"isGalaxyCompatible"`
-	Tags                 []Tag        `json:"tags"`
+	Tags                 []string     `json:"tags"`
 	Id                   int          `json:"id"`
 	Availability         Availability `json:"availability"`
 	Title                string       `json:"title"`
