@@ -12,14 +12,13 @@ type Details struct {
 	// TODO: Create a helper func to process Downloads
 	Downloads [][]interface{} `json:"downloads"`
 	// TODO: find data examples where GalaxyDownloads is not empty and create a type from that
-	GalaxyDownloads  []interface{} `json:"galaxyDownloads"`
-	Extras           []Extra       `json:"extras"`
-	DLCs             []Details     `json:"dlcs"`
-	Tags             []Tag         `json:"tags"`
-	IsPreOrder       bool          `json:"isPreOrder"`
-	ReleaseTimestamp int           `json:"releaseTimestamp"`
-	// TODO: find data examples where Messages is not empty and create a type from that
-	Messages             []interface{} `json:"messages"`
+	GalaxyDownloads      []interface{} `json:"galaxyDownloads"`
+	Extras               []Extra       `json:"extras"`
+	DLCs                 []Details     `json:"dlcs"`
+	Tags                 []Tag         `json:"tags"`
+	IsPreOrder           bool          `json:"isPreOrder"`
+	ReleaseTimestamp     int           `json:"releaseTimestamp"`
+	Messages             []string      `json:"messages"`
 	Changelog            string        `json:"changelog"`
 	ForumLink            string        `json:"forumLink"`
 	IsBaseProductMissing bool          `json:"isBaseProductMissing"`
