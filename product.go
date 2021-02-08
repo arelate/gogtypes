@@ -5,7 +5,7 @@
 package gogtypes
 
 type Product struct {
-	CustomAttributes          []interface{}   `json:"customAttributes"`
+	CustomAttributes          interface{}     `json:"customAttributes"`
 	Developer                 string          `json:"developer"`
 	Publisher                 string          `json:"publisher"`
 	Gallery                   []string        `json:"gallery"`
