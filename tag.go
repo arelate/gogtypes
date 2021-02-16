@@ -1,4 +1,4 @@
-package gogtypes
+package gog_types
 
 type Tag struct {
 	Id           string `json:"id"`

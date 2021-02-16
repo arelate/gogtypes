@@ -1,4 +1,4 @@
-package gogtypes
+package gog_types
 
 type AccountProductsSortOrder string
 

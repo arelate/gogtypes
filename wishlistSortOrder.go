@@ -1,4 +1,4 @@
-package gogtypes
+package gog_types
 
 type WishlistSortOrder string
 

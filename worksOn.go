@@ -1,4 +1,4 @@
-package gogtypes
+package gog_types
 
 type WorksOn struct {
 	Windows bool `json:"Windows"`

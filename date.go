@@ -1,4 +1,4 @@
-package gogtypes
+package gog_types
 
 type Date struct {
 	Date         string `json:"date"`
