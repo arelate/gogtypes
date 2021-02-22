@@ -10,12 +10,22 @@ type AccountProductsPage struct {
 	TotalProducts   int    `json:"totalProducts"`
 	ProductsPerPage int    `json:"productsPerPage"`
 	// TODO: find data examples where ContentSystemCompatibility is not empty and create a type from that
-	ContentSystemCompatibility interface{}      `json:"contentSystemCompatibility"`
-	MoviesCount                int              `json:"moviesCount"`
-	Tags                       []Tag            `json:"tags"`
+	ContentSystemCompatibility interface{} `json:"contentSystemCompatibility"`
+	MoviesCount                int         `json:"moviesCount"`
+	Tags                       []struct {
+		Id           string `json:"id"`
+		Name         string `json:"name"`
+		ProductCount string `json:"productCount"`
+	} `json:"tags"`
 	Products                   []AccountProduct `json:"products"`
 	UpdatedProductsCount       int              `json:"updatedProductsCount"`
 	HiddenUpdatedProductsCount int              `json:"hiddenUpdatedProductsCount"`
-	AppliedFilters             AppliedFilter    `json:"appliedFilters"`
-	HasHiddenProducts          bool             `json:"hasHiddenProducts"`
+	AppliedFilters             struct {
+		Tags []struct {
+			Id           string `json:"id"`
+			Name         string `json:"name"`
+			ProductCount string `json:"productCount"`
+		} `json:"tags"`
+	} `json:"appliedFilters"`
+	HasHiddenProducts bool `json:"hasHiddenProducts"`
 }

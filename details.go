@@ -12,18 +12,31 @@ type Details struct {
 	// TODO: Create a helper func to process Downloads
 	Downloads [][]interface{} `json:"downloads"`
 	// TODO: find data examples where GalaxyDownloads is not empty and create a type from that
-	GalaxyDownloads      []interface{} `json:"galaxyDownloads"`
-	Extras               []Extra       `json:"extras"`
-	DLCs                 []Details     `json:"dlcs"`
-	Tags                 []Tag         `json:"tags"`
-	IsPreOrder           bool          `json:"isPreOrder"`
-	ReleaseTimestamp     int           `json:"releaseTimestamp"`
-	Messages             []string      `json:"messages"`
-	Changelog            string        `json:"changelog"`
-	ForumLink            string        `json:"forumLink"`
-	IsBaseProductMissing bool          `json:"isBaseProductMissing"`
+	GalaxyDownloads []interface{} `json:"galaxyDownloads"`
+	Extras          []struct {
+		ManualUrl string `json:"manualUrl"`
+		Name      string `json:"name"`
+		Type      string `json:"type"`
+		Info      int    `json:"info"`
+		Size      string `json:"size"`
+	} `json:"extras"`
+	DLCs []Details `json:"dlcs"`
+	Tags []struct {
+		Id           string `json:"id"`
+		Name         string `json:"name"`
+		ProductCount string `json:"productCount"`
+	} `json:"tags"`
+	IsPreOrder           bool     `json:"isPreOrder"`
+	ReleaseTimestamp     int      `json:"releaseTimestamp"`
+	Messages             []string `json:"messages"`
+	Changelog            string   `json:"changelog"`
+	ForumLink            string   `json:"forumLink"`
+	IsBaseProductMissing bool     `json:"isBaseProductMissing"`
 	// TODO: find data examples where MissingBaseProduct is not empty and create a type from that
-	MissingBaseProduct     interface{}             `json:"missingBaseProduct"`
-	Features               []string                `json:"features"`
-	SimpleGalaxyInstallers []SimpleGalaxyInstaller `json:"simpleGalaxyInstallers"`
+	MissingBaseProduct     interface{} `json:"missingBaseProduct"`
+	Features               []string    `json:"features"`
+	SimpleGalaxyInstallers []struct {
+		Path string `json:"path"`
+		Os   string `json:"os"`
+	} `json:"simpleGalaxyInstallers"`
 }

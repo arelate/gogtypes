@@ -23,7 +23,7 @@ func (mt Media) String() string {
 	}
 }
 
-func Parse(mt string) Media {
+func ParseMedia(mt string) Media {
 	switch mt {
 	case "game":
 		return Game
