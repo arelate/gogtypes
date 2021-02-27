@@ -2,7 +2,7 @@ package gog_types
 
 import "time"
 
-type ApiProduct struct {
+type ApiProductV2 struct {
 	InDevelopment struct {
 		Active bool `json:"active"`
 	} `json:"inDevelopment"`
