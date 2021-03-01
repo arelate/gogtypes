@@ -7,7 +7,7 @@ package gog_types
 type Media int
 
 const (
-	Unknown Media = iota
+	UnknownMedia Media = iota
 	Game
 	Movie
 )
@@ -30,6 +30,17 @@ func ParseMedia(mt string) Media {
 	case "movie":
 		return Movie
 	default:
-		return Unknown
+		return UnknownMedia
+	}
+}
+
+func Valid(mt Media) bool {
+	switch mt {
+	case Game:
+		fallthrough
+	case Movie:
+		return true
+	default:
+		return false
 	}
 }
