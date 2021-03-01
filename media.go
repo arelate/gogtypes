@@ -34,7 +34,7 @@ func ParseMedia(mt string) Media {
 	}
 }
 
-func Valid(mt Media) bool {
+func ValidMedia(mt Media) bool {
 	switch mt {
 	case Game:
 		fallthrough
