@@ -4,9 +4,9 @@
 
 package gog_types
 
-type ProductsPage struct {
+type StoreProductsPage struct {
 	Page
-	Products []Product `json:"products"`
+	Products []StoreProduct `json:"products"`
 	// TODO: find data examples where Ts is not empty and create a type from that
 	Ts               interface{} `json:"ts"`
 	TotalResults     string      `json:"totalResults"`

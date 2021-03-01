@@ -10,6 +10,6 @@ type WishlistPage struct {
 	TotalProducts   int    `json:"totalProducts"`
 	ProductsPerPage int    `json:"productsPerPage"`
 	// TODO: find data examples where ContentSystemCompatibility is not empty and create a type from that
-	ContentSystemCompatibility interface{} `json:"contentSystemCompatibility"`
-	Products                   []Product   `json:"products"`
+	ContentSystemCompatibility interface{}    `json:"contentSystemCompatibility"`
+	Products                   []StoreProduct `json:"products"`
 }
