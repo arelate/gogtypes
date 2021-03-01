@@ -4,7 +4,7 @@
 
 package gog_types
 
-type Product struct {
+type StoreProduct struct {
 	CustomAttributes interface{} `json:"customAttributes"`
 	Developer        string      `json:"developer"`
 	Publisher        string      `json:"publisher"`
