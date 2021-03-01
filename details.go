@@ -10,7 +10,7 @@ type Details struct {
 	CdKey           string `json:"cdKey"`
 	TextInformation string `json:"textInformation"`
 	// TODO: Create a helper func to process Downloads
-	Downloads [][]interface{} `json:"downloads"`
+	Downloads []interface{} `json:"downloads"`
 	// TODO: find data examples where GalaxyDownloads is not empty and create a type from that
 	GalaxyDownloads []interface{} `json:"galaxyDownloads"`
 	Extras          []struct {
