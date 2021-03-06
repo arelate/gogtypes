@@ -158,3 +158,7 @@ type ApiProductV2 struct {
 		Series interface{} `json:"series"`
 	} `json:"_embedded"`
 }
+
+func (apv2 *ApiProductV2) GetTitle() string {
+	return apv2.Embedded.Product.Title
+}

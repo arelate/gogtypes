@@ -40,3 +40,7 @@ type Details struct {
 		Os   string `json:"os"`
 	} `json:"simpleGalaxyInstallers"`
 }
+
+func (det *Details) GetTitle() string {
+	return det.Title
+}
