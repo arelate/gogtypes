@@ -76,3 +76,7 @@ type StoreProduct struct {
 	Slug             string `json:"slug"`
 	IsWishlistable   bool   `json:"isWishlistable"`
 }
+
+func (sp *StoreProduct) GetTitle() string {
+	return sp.Title
+}

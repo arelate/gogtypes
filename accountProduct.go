@@ -39,3 +39,7 @@ type AccountProduct struct {
 	IsInDevelopment      bool `json:"isInDevelopment"`
 	IsHidden             bool `json:"isHidden"`
 }
+
+func (ap *AccountProduct) GetTitle() string {
+	return ap.Title
+}
