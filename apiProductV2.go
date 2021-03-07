@@ -175,7 +175,7 @@ func (apv2 *ApiProductV2) GetDeveloper() string {
 	for _, dev := range apv2.Embedded.Developers {
 		devs = append(devs, dev.Name)
 	}
-	return strings.Join(devs, ",")
+	return strings.Join(devs, ";")
 }
 
 func (apv2 *ApiProductV2) GetPublisher() string {
