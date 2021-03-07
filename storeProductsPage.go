@@ -17,6 +17,7 @@ type StoreProductsPage struct {
 func (spp *StoreProductsPage) GetProducts() []IdGetter {
 	idGetters := make([]IdGetter, 0)
 	for _, sp := range spp.Products {
+		sp := sp
 		idGetters = append(idGetters, &sp)
 	}
 	return idGetters

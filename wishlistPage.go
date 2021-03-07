@@ -17,6 +17,7 @@ type WishlistPage struct {
 func (wp *WishlistPage) GetProducts() []IdGetter {
 	idGetters := make([]IdGetter, 0)
 	for _, sp := range wp.Products {
+		sp := sp
 		idGetters = append(idGetters, &sp)
 	}
 	return idGetters
