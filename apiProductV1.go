@@ -192,6 +192,10 @@ type ApiProductV1 struct {
 	Changelog string `json:"changelog"`
 }
 
+func (apv1 *ApiProductV1) GetId() int {
+	return apv1.Id
+}
+
 func (apv1 *ApiProductV1) GetTitle() string {
 	return apv1.Title
 }

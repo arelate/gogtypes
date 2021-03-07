@@ -77,6 +77,10 @@ type StoreProduct struct {
 	IsWishlistable   bool   `json:"isWishlistable"`
 }
 
+func (sp *StoreProduct) GetId() int {
+	return sp.Id
+}
+
 func (sp *StoreProduct) GetTitle() string {
 	return sp.Title
 }

@@ -159,6 +159,10 @@ type ApiProductV2 struct {
 	} `json:"_embedded"`
 }
 
+func (apv2 *ApiProductV2) GetId() int {
+	return apv2.Embedded.Product.Id
+}
+
 func (apv2 *ApiProductV2) GetTitle() string {
 	return apv2.Embedded.Product.Title
 }

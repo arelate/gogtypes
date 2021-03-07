@@ -40,6 +40,10 @@ type AccountProduct struct {
 	IsHidden             bool `json:"isHidden"`
 }
 
+func (ap *AccountProduct) GetId() int {
+	return ap.Id
+}
+
 func (ap *AccountProduct) GetTitle() string {
 	return ap.Title
 }
