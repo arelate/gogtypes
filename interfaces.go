@@ -11,3 +11,11 @@ type ProductsGetter interface {
 type TitleGetter interface {
 	GetTitle() string
 }
+
+type DeveloperGetter interface {
+	GetDeveloper() string
+}
+
+type PublisherGetter interface {
+	GetPublisher() string
+}

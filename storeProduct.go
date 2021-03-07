@@ -84,3 +84,11 @@ func (sp *StoreProduct) GetId() int {
 func (sp *StoreProduct) GetTitle() string {
 	return sp.Title
 }
+
+func (sp *StoreProduct) GetDeveloper() string {
+	return sp.Developer
+}
+
+func (sp *StoreProduct) GetPublisher() string {
+	return sp.Publisher
+}

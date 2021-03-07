@@ -1,6 +1,9 @@
 package gog_types
 
-import "time"
+import (
+	"strings"
+	"time"
+)
 
 type ApiProductV2 struct {
 	InDevelopment struct {
@@ -165,4 +168,16 @@ func (apv2 *ApiProductV2) GetId() int {
 
 func (apv2 *ApiProductV2) GetTitle() string {
 	return apv2.Embedded.Product.Title
+}
+
+func (apv2 *ApiProductV2) GetDeveloper() string {
+	devs := make([]string, 0, len(apv2.Embedded.Developers))
+	for _, dev := range apv2.Embedded.Developers {
+		devs = append(devs, dev.Name)
+	}
+	return strings.Join(devs, ",")
+}
+
+func (apv2 *ApiProductV2) GetPublisher() string {
+	return apv2.Embedded.Publisher.Name
 }
