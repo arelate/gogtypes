@@ -13,3 +13,11 @@ type WishlistPage struct {
 	ContentSystemCompatibility interface{}    `json:"contentSystemCompatibility"`
 	Products                   []StoreProduct `json:"products"`
 }
+
+func (wp *WishlistPage) GetProducts() []IdGetter {
+	idGetters := make([]IdGetter, 0)
+	for _, sp := range wp.Products {
+		idGetters = append(idGetters, &sp)
+	}
+	return idGetters
+}

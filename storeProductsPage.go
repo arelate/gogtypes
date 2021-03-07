@@ -13,3 +13,11 @@ type StoreProductsPage struct {
 	TotalGamesFound  int         `json:"totalGamesFound"`
 	TotalMoviesFound int         `json:"totalMoviesFound"`
 }
+
+func (spp *StoreProductsPage) GetProducts() []IdGetter {
+	idGetters := make([]IdGetter, 0)
+	for _, sp := range spp.Products {
+		idGetters = append(idGetters, &sp)
+	}
+	return idGetters
+}

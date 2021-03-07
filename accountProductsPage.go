@@ -29,3 +29,11 @@ type AccountProductsPage struct {
 	} `json:"appliedFilters"`
 	HasHiddenProducts bool `json:"hasHiddenProducts"`
 }
+
+func (app *AccountProductsPage) GetProducts() []IdGetter {
+	idGetters := make([]IdGetter, 0)
+	for _, ap := range app.Products {
+		idGetters = append(idGetters, &ap)
+	}
+	return idGetters
+}
