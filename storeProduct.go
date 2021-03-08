@@ -92,3 +92,7 @@ func (sp *StoreProduct) GetDeveloper() string {
 func (sp *StoreProduct) GetPublisher() string {
 	return sp.Publisher
 }
+
+func (sp *StoreProduct) GetImage() string {
+	return sp.Image
+}

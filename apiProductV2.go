@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const formatterTemplate = "_{formatter}"
+
 type ApiProductV2 struct {
 	InDevelopment struct {
 		Active bool `json:"active"`
@@ -175,9 +177,13 @@ func (apv2 *ApiProductV2) GetDeveloper() string {
 	for _, dev := range apv2.Embedded.Developers {
 		devs = append(devs, dev.Name)
 	}
-	return strings.Join(devs, ";")
+	return strings.Join(devs, ",")
 }
 
 func (apv2 *ApiProductV2) GetPublisher() string {
 	return apv2.Embedded.Publisher.Name
+}
+
+func (apv2 *ApiProductV2) GetImage() string {
+	return strings.Replace(apv2.Embedded.Product.Links.Image.Href, formatterTemplate, "", 1)
 }

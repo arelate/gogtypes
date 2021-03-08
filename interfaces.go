@@ -1,11 +1,11 @@
 package gog_types
 
-type IdGetter interface {
-	GetId() int
-}
-
 type ProductsGetter interface {
 	GetProducts() []IdGetter
+}
+
+type IdGetter interface {
+	GetId() int
 }
 
 type TitleGetter interface {
@@ -18,4 +18,12 @@ type DeveloperGetter interface {
 
 type PublisherGetter interface {
 	GetPublisher() string
+}
+
+type ImageGetter interface {
+	GetImage() string
+}
+
+type BoxArtGetter interface {
+	GetBoxArt() string
 }

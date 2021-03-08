@@ -47,3 +47,7 @@ func (ap *AccountProduct) GetId() int {
 func (ap *AccountProduct) GetTitle() string {
 	return ap.Title
 }
+
+func (ap *AccountProduct) GetImage() string {
+	return ap.Image
+}
