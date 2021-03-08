@@ -191,3 +191,11 @@ func (apv2 *ApiProductV2) GetImage() string {
 func (apv2 *ApiProductV2) GetBoxArt() string {
 	return apv2.Links.BoxArtImage.Href
 }
+
+func (apv2 *ApiProductV2) GetIcon() string {
+	return apv2.Links.Icon.Href
+}
+
+func (apv2 *ApiProductV2) GetLogo() string {
+	return apv2.Links.Logo.Href
+}

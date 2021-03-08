@@ -27,3 +27,11 @@ type ImageGetter interface {
 type BoxArtGetter interface {
 	GetBoxArt() string
 }
+
+type LogoGetter interface {
+	GetLogo() string
+}
+
+type IconGetter interface {
+	GetIcon() string
+}

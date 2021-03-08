@@ -10,6 +10,7 @@ type ApiProductV1 struct {
 		Osx     bool `json:"osx"`
 		Linux   bool `json:"linux"`
 	} `json:"content_system_compatibility"`
+	// TODO: figure out a more sustainable plan for languages
 	Languages struct {
 		Cn string `json:"cn"`
 		De string `json:"de"`
@@ -199,3 +200,11 @@ func (apv1 *ApiProductV1) GetId() int {
 func (apv1 *ApiProductV1) GetTitle() string {
 	return apv1.Title
 }
+
+func (apv1 *ApiProductV1) GetIcon() string {
+	return apv1.Images.Icon
+}
+
+// ApiProducts doesn't contain logo.
+// images.logo, images.logo2x are basically specially formatted images
+// func (apv1 *ApiProductV1) GetLogo() string {}
