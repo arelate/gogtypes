@@ -44,3 +44,7 @@ type Details struct {
 func (det *Details) GetTitle() string {
 	return det.Title
 }
+
+func (det *Details) GetBackgroundImage() string {
+	return det.BackgroundImage
+}

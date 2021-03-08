@@ -199,3 +199,11 @@ func (apv2 *ApiProductV2) GetIcon() string {
 func (apv2 *ApiProductV2) GetLogo() string {
 	return apv2.Links.Logo.Href
 }
+
+func (apv2 *ApiProductV2) GetBackgroundImage() string {
+	return apv2.Links.BackgroundImage.Href
+}
+
+func (apv2 *ApiProductV2) GetGalaxyBackgroundImage() string {
+	return apv2.Links.GalaxyBackgroundImage.Href
+}

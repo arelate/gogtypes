@@ -35,3 +35,11 @@ type LogoGetter interface {
 type IconGetter interface {
 	GetIcon() string
 }
+
+type BackgroundImageGetter interface {
+	GetBackgroundImage() string
+}
+
+type GalaxyBackgroundImageGetter interface {
+	GetGalaxyBackgroundImage() string
+}

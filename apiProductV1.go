@@ -206,5 +206,9 @@ func (apv1 *ApiProductV1) GetIcon() string {
 }
 
 // ApiProducts doesn't contain logo.
-// images.logo, images.logo2x are basically specially formatted images
-// func (apv1 *ApiProductV1) GetLogo() string {}
+// images.logo, images.logo2x are basically specially formatted DownloadType.Image
+// func (apv1 *ApiProductV1) GetLogo() string { return "" }
+
+func (apv1 *ApiProductV1) GetBackgroundImage() string {
+	return apv1.Images.Background
+}
