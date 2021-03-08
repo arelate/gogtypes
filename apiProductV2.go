@@ -187,3 +187,7 @@ func (apv2 *ApiProductV2) GetPublisher() string {
 func (apv2 *ApiProductV2) GetImage() string {
 	return strings.Replace(apv2.Embedded.Product.Links.Image.Href, formatterTemplate, "", 1)
 }
+
+func (apv2 *ApiProductV2) GetBoxArt() string {
+	return apv2.Links.BoxArtImage.Href
+}
