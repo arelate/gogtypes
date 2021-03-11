@@ -212,3 +212,11 @@ func (apv1 *ApiProductV1) GetIcon() string {
 func (apv1 *ApiProductV1) GetBackgroundImage() string {
 	return apv1.Images.Background
 }
+
+func (apv1 *ApiProductV1) GetScreenshots() []string {
+	screenshots := make([]string, 0)
+	for _, screenshot := range apv1.Screenshots {
+		screenshots = append(screenshots, screenshot.FormatterTemplateUrl)
+	}
+	return screenshots
+}

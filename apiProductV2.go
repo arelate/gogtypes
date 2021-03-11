@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-const formatterTemplate = "_{formatter}"
+//const formatterTemplate = "_{formatter}"
 
 type ApiProductV2 struct {
 	InDevelopment struct {
@@ -185,7 +185,7 @@ func (apv2 *ApiProductV2) GetPublisher() string {
 }
 
 func (apv2 *ApiProductV2) GetImage() string {
-	return strings.Replace(apv2.Embedded.Product.Links.Image.Href, formatterTemplate, "", 1)
+	return apv2.Embedded.Product.Links.Image.Href
 }
 
 func (apv2 *ApiProductV2) GetBoxArt() string {
@@ -206,4 +206,12 @@ func (apv2 *ApiProductV2) GetBackgroundImage() string {
 
 func (apv2 *ApiProductV2) GetGalaxyBackgroundImage() string {
 	return apv2.Links.GalaxyBackgroundImage.Href
+}
+
+func (apv2 *ApiProductV2) GetScreenshots() []string {
+	screenshots := make([]string, 0)
+	for _, screenshot := range apv2.Embedded.Screenshots {
+		screenshots = append(screenshots, screenshot.Links.Self.Href)
+	}
+	return screenshots
 }

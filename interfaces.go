@@ -43,3 +43,7 @@ type BackgroundImageGetter interface {
 type GalaxyBackgroundImageGetter interface {
 	GetGalaxyBackgroundImage() string
 }
+
+type ScreenshotsGetter interface {
+	GetScreenshots() []string
+}

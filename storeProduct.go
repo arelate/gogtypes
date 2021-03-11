@@ -96,3 +96,7 @@ func (sp *StoreProduct) GetPublisher() string {
 func (sp *StoreProduct) GetImage() string {
 	return sp.Image
 }
+
+func (sp *StoreProduct) GetScreenshots() []string {
+	return sp.Gallery
+}
